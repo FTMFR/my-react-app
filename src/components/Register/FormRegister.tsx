@@ -24,7 +24,6 @@ const FormRegister = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
-  const [loginDatas, setLoginDatas] = useState<RegisterInputs>();
   const loginSchema = z.object({
     name: z.string().min(3, "Name must be at least 3 characters"),
     email: z.string().email("Invalid email format"),
@@ -40,7 +39,6 @@ const FormRegister = () => {
   });
 
   const onSubmit: SubmitHandler<RegisterInputs> = (data) => {
-    setLoginDatas(data);
     if (data) {
       localStorage.setItem("user", JSON.stringify(data.email));
       setIsAuthenticated(true);
@@ -58,12 +56,6 @@ const FormRegister = () => {
       navigate("/register");
     }
   }, [isAuthenticated, navigate]);
-
-  useEffect(() => {
-    if (loginDatas?.email) {
-      console.log("Logged in as:", loginDatas.email);
-    }
-  }, [loginDatas]);
 
   return (
     <Box
@@ -262,7 +254,6 @@ const FormRegister = () => {
       {/* Submit Button */}
       <Button
         type="submit"
-        // href="/register"
         fullWidth
         sx={{
           backgroundColor: "#1d8d94",
