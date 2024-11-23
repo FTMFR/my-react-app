@@ -23,7 +23,7 @@ const Exchange: React.FC<ExchangeProps> = ({ handleNext }) => {
 
   useEffect(() => {
     if (fromValue) {
-      setToValue((fromValue * 5).toString());
+      setToValue((fromValue * 5));
     } else {
       setToValue("");
     }
