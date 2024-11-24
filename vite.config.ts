@@ -1,14 +1,17 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';  // Import 'path' here
 
-// This workaround is needed to get __dirname in the Vite build environment
-// const __dirname = dirname(fileURLToPath(import.meta.url));
+// This workaround provides `__dirname` in an ES module environment
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': dirname(fileURLToPath(import.meta.url)) + '/src',  // Path alias using __dirname workaround
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 });
