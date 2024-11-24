@@ -34,7 +34,7 @@ const SuccesPaymentPM = () => {
           width: "100%",
         }}
       >
-        <Box component="img" src="./public/success.png" />
+        <Box component="img" src="/success.png" />
         <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Payment Success!
         </Typography>
@@ -214,7 +214,7 @@ const SuccesPaymentPM = () => {
               }}
               onClick={handleCopyClick}
             >
-              <Box component="img" src="./public/copy.png" />
+              <Box component="img" src="/copy.png" />
             </Box>
           </Box>
         </Box>

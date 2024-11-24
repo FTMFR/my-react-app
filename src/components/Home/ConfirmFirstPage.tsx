@@ -111,7 +111,7 @@ const ConfirmFirstPage = () => {
         </Box>
         <Box
           component="img"
-          src="./public/qrCode.png"
+          src="/qrCode.png"
           sx={{
             width: "191px",
             height: "191px",

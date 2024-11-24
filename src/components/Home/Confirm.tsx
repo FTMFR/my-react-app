@@ -194,8 +194,8 @@ const Confirm: FC<ConfirmProps> = ({ handleNext }) => {
                     component="img"
                     src={`${
                       exchangeData.fromCurrency === "Tether"
-                        ? "./public/tether.svg"
-                        : "./public/perfect.png"
+                        ? "/tether.svg"
+                        : "/perfect.png"
                     }`}
                   />
                   <Typography
@@ -259,8 +259,8 @@ const Confirm: FC<ConfirmProps> = ({ handleNext }) => {
                     component="img"
                     src={`${
                       exchangeData.fromCurrency === "Tether"
-                        ? "./public/perfect.png"
-                        : "./public/tether.svg"
+                        ? "/perfect.png"
+                        : "/tether.svg"
                     }`}
                   />
                   <Typography
@@ -327,8 +327,8 @@ const Confirm: FC<ConfirmProps> = ({ handleNext }) => {
                     component="img"
                     src={`${
                       exchangeData.fromCurrency === "Tether"
-                        ? "./public/tether.svg"
-                        : "./public/perfect.png"
+                        ? "/tether.svg"
+                        : "/perfect.png"
                     }`}
                   />
                   <Typography
@@ -394,8 +394,8 @@ const Confirm: FC<ConfirmProps> = ({ handleNext }) => {
                     component="img"
                     src={`${
                       exchangeData.fromCurrency === "Tether"
-                        ? "./public/perfect.png"
-                        : "./public/tether.svg"
+                        ? "/perfect.png"
+                        : "/tether.svg"
                     }`}
                   />
                   <Typography

@@ -7,7 +7,7 @@ const LogoSvg = () => {
       src="/logo.svg"
       alt="Logo"
       sx={{
-        width: { xs: '100px', sm: '150px', md: '200px', lg: '232px' },
+        width: { xs: "100px", sm: "150px", md: "200px", lg: "232px" },
         height: "auto",
       }}
     />

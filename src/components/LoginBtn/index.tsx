@@ -20,7 +20,7 @@ const LoginBtn = () => {
     >
       <Box
         component="img"
-        src="./public/profile.svg"
+        src="/profile.svg"
         alt="profile"
         sx={{ width: 24, height: 24, display: "flex" }}
       />

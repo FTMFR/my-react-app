@@ -15,7 +15,7 @@ const Waiting = () => {
           width: "100%",
         }}
       >
-        <Box component="img" src="./public/waiting.png" />
+        <Box component="img" src="/waiting.png" />
         <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Waiting ...
         </Typography>

@@ -20,7 +20,7 @@ const SuccesPayment = () => {
           width: "100%",
         }}
       >
-        <Box component="img" src="./public/success.png" />
+        <Box component="img" src="/success.png" />
         <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Payment Success!
         </Typography>

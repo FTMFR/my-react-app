@@ -172,8 +172,8 @@ const Exchange: React.FC<ExchangeProps> = ({ handleNext }) => {
                 component="img"
                 src={`${
                   fromCurrency === "Tether"
-                    ? "./public/tether.svg"
-                    : "./public/perfect.png"
+                    ? "/tether.svg"
+                    : "/perfect.png"
                 }`}
                 sx={{
                   width: {
@@ -347,8 +347,8 @@ const Exchange: React.FC<ExchangeProps> = ({ handleNext }) => {
                 component="img"
                 src={`${
                   toCurrency == "Tether"
-                    ? "./public/tether.svg"
-                    : "./public/perfect.png"
+                    ? "/tether.svg"
+                    : "/perfect.png"
                 }`}
                 sx={{
                   width: {

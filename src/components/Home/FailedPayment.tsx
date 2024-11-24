@@ -29,7 +29,7 @@ const FailedPayment = () => {
           gap: "12px",
         }}
       >
-        <Box component="img" src="./public/failed.png" />
+        <Box component="img" src="/failed.png" />
         <Typography sx={{ fontSize: "32px", fontWeight: "bold" }}>
           Your Payment Time Has Expired !
         </Typography>
