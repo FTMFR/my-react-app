@@ -19,20 +19,18 @@ const Exchange: React.FC<ExchangeProps> = ({ handleNext }) => {
   const [toValue, setToValue] = useState<number | string>("");
   const [error, setError] = useState("");
   const { handleSubmit } = useForm();
-  const [fromValue, setFromValue] = useState<number>(0);
+  const [fromValue, setFromValue] = useState<number>();
 
   useEffect(() => {
-    if (fromValue) {
-      setToValue((fromValue * 5));
+    if (fromValue && !isNaN(fromValue)) {
+      setToValue(fromValue * 5);
     } else {
       setToValue("");
     }
   }, [fromValue]);
 
   const onSubmit = () => {
-    const parsedFromValue =
-      typeof fromValue === "number" ? fromValue : parseFloat(fromValue);
-
+    const parsedFromValue = fromValue;
     if (!parsedFromValue || parsedFromValue <= 0) {
       setError("Please enter a valid number in the 'From' field.");
       return;
@@ -115,8 +113,15 @@ const Exchange: React.FC<ExchangeProps> = ({ handleNext }) => {
             }}
           >
             <TextField
-              value={fromValue}
-              onChange={(e) => setFromValue(parseFloat(e.target.value))}
+              value={fromValue || ""}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (isNaN(value) || value < 0) {
+                  setFromValue(undefined);
+                } else {
+                  setFromValue(value);
+                }
+              }}
               sx={{
                 borderRadius: "10px",
                 border: "none",
